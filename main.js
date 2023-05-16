@@ -1,24 +1,34 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+console.log('holi')
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const getRandomInt = (min, max) => {
+  return Math.floor(Math.random() * (max - min) + min);
+};
 
-setupCounter(document.querySelector('#counter'))
+
+document.addEventListener('DOMContentLoaded', () => {
+  const radom = getRandomInt(1,201)
+  fetchData(radom)
+})
+
+const fetchData = async(id) => {
+  try {
+    const res = await fetch (`https://rickandmortyapi.com/api/character/${id}`)
+    const data = await res.json()
+    cardView(data)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+const cardView = (character) => {
+  console.log(character)
+  const flex = document.querySelector('.flex');
+  const template = document.querySelector('#template-card').content;
+  const clone = template.cloneNode(true);
+  const fragment = document.createDocumentFragment();
+
+  clone.querySelector('.card-body-img').setAttribute('src' , character.image)
+
+  fragment.appendChild(clone)
+  flex.appendChild(fragment)
+}

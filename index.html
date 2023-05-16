@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rick And Morty API</title>
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Mono:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./main.js"></script>
   </head>
-  <body>
-    <main class="flex">
+  <body id="app">
+    <main class="flex" ></main>
+    
+    <template id="template-card">
       <article class="card">
         <img src="./images/bg-pattern-card.svg" alt="imagen header card" class="card-header">
         <div class="card-body">
@@ -40,7 +42,7 @@
             <p>Photos</p>
           </div>
         </div>
-      </article>
-    </main>
+        </article>
+    </template>
   </body>
 </html>
