@@ -47,24 +47,24 @@ body {
   border-bottom: 1px solid rgba(165, 165, 165, 0.413);
 }
 .card-body-img {
+  width: 200px;
+  height: 200px;
   border: 5px solid white;
   border-radius: 50%;
-  margin-top: -50px;
+  margin-top: -105px;
   background-color: white;
 }
 .card-body-title {
   margin-top: 2rem;
   font-size: 1.8rem;
-}
-.card-body-title span {
-  color: var(--dark-gray);
-  font-weight: 400;
+  text-align: center;
 }
 .card-body-text {
   color: var(--dark-gray);
   font-size: 1.6rem;
   margin-bottom: 2rem;
   margin-top: 0;
+  text-align: center;
 }
 .card-footer {
   display: flex;
