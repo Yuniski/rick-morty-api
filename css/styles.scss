@@ -23,12 +23,23 @@ body {
   background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw bottom 50vh, left 50vw top 50vh;
-  margin: 50px 0;
+}
+
+main {
+  position: relative;
+}
+
+.versus {
+  position: absolute;
+  top: 47%;
+  left: 48%;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 .flex{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
 }
