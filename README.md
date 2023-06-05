@@ -1,6 +1,6 @@
 ## Rick and Morty API ## 
 
-![Project image, QR Card Component](./images/versus-images.png)
+![Project image, Rick and Morty Versus](./images/versus-image.png)
 
 ## Welcome! 👋
 
